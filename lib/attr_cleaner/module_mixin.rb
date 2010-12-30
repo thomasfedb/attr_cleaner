@@ -8,7 +8,7 @@ module AttrCleaner
     end
     
     def write_attribute_with_cleaner(attr_name, value)
-      if attr_cleaners.include?(attr_name.to_sym) && value.is_a?(String)
+      if Array(attr_cleaners).include?(attr_name.to_sym) && value.is_a?(String)
         value = value.strip
         value = nil if value.empty?
       end
