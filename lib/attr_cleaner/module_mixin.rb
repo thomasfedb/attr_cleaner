@@ -15,7 +15,12 @@ module AttrCleaner
       write_attribute_without_cleaner(attr_name, value)
     end
     
-    module ClassMethods      
+    module ClassMethods
+      # Adds attributes to the list of attributes to be cleaned
+      # Attributes are inherited, but can be removed from :except
+      #
+      # @param [Hash] args options hash, set :only and/or :except
+      # @return [Array] a array of symbols representing the attributes to be cleaned
       def attr_cleaner(args = {})
         all_columns = column_names.map(&:to_sym)
         
