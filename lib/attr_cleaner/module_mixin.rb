@@ -7,16 +7,16 @@ module AttrCleaner
       class_attribute :attr_cleaners
     end
     
-    module ClassMethods
-      def write_attribute_with_cleaner(attr_name, value)
-        if attr_cleaners.include?(attr_cleaners.to_sym) && value.is_a?(String)
-          value = value.strip
-          value = nil if value.empty?
-        end
-        write_attribute_without_cleaner(attr_name, value)
+    def write_attribute_with_cleaner(attr_name, value)
+      if attr_cleaners.include?(attr_name.to_sym) && value.is_a?(String)
+        value = value.strip
+        value = nil if value.empty?
       end
-      
-      def attr_cleaner(*args)
+      write_attribute_without_cleaner(attr_name, value)
+    end
+    
+    module ClassMethods      
+      def attr_cleaner(args = {})
         all_columns = column_names.map(&:to_sym)
         
         only = Array(args[:only])          
