@@ -20,7 +20,12 @@ You can restrict the cleaning to specific attributes with `:only` and `:except`
   attr_cleaner :only => [:name, :age]
   attr_cleaner :except => :age
   attr_cleaner :except => [:age, :price]
+  
+Attributes to be cleaned can be inherited, so sometimes you may need both :only and :except
 
+  # Remove :age from the list, add :name
+  attr_cleaner :only => :name, :except => :age
+  
 == Copyright
 
 Copyright (c) 2010 Thomas Drake-Brockman. See LICENSE for details.
