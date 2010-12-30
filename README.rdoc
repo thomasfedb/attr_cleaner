@@ -1,0 +1,26 @@
+= AttrCleaner
+
+Cleans up your model attributes. Strips leading and trailing space, and turns empty strings into nil. Only supports Rails 3.
+
+== Installing
+
+Add this to your Gemfile:
+
+  gem "attr_cleaner"
+
+== Usage
+
+Simply add this to any model you want to clean:
+
+  attr_cleaner
+
+You can restrict the cleaning to specific attributes with `:only` and `:except`
+
+  attr_cleaner :only => :name
+  attr_cleaner :only => [:name, :age]
+  attr_cleaner :except => :age
+  attr_cleaner :except => [:age, :price]
+
+== Copyright
+
+Copyright (c) 2010 Thomas Drake-Brockman. See LICENSE for details.
