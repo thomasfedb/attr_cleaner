@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Thomas Drake-Brockman"]
   s.email       = ["thomas@pixent.com.au"]
-  s.homepage    = ""
+  s.homepage    = "https://rubygems.org/gems/attr_cleaner"
   s.summary     = "Cleans up model attributes."
   s.description = "Strips spaces from attributes, and sets empty strings to nil."
 
@@ -16,4 +16,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+  
+  s.add_dependency('activesupport', '~> 3.0.0')
+  s.add_dependency('activerecord', '~> 3.0.0')
 end
