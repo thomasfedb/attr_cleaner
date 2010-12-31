@@ -2,4 +2,4 @@ pkg/*
 .yardoc/*
 *.gem
 .bundle
-/.redcar/tags
+.redcar/*
