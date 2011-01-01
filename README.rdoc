@@ -1,12 +1,27 @@
 = AttrCleaner
 
-Cleans up your model attributes. Strips leading and trailing space, and turns empty strings into nil. Only supports Rails 3.
+Cleans up your model attributes. Strips leading and trailing space, and turns empty
+strings into nil.
 
 == Installing
 
-Add this to your Gemfile:
+For Rails 3 with ActiveRecord just add this to your Gemfile:
 
   gem "attr_cleaner"
+  
+Attr cleaner will play nice with any ORM that writes attributes
+via a method called `write_attribute`.
+To get AttrCleaner working with your ORM add this to an initializer file:
+  
+  MyOrm.send(:include, AttrCleaner::ModelMixin)
+  
+or, include it into your models:
+  
+  include AttrCleaner::ModelMixin
+  
+AttrCleaner can also be used outside of Rails if ActiveSupport 3 is avalable. If you're using
+AttrCleaner outside of Rails, and it detect ActiveRecord is allready loaded, it will include
+itself into ActiveRecod. Make sure ActiveRecord is loaded first.
 
 == Usage
 
