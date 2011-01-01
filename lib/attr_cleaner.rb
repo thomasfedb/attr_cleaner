@@ -1,5 +1,6 @@
 require "active_support"
 require "active_support/core_ext/module/aliasing"
+require "active_support/core_ext/class/attribute"
 require "active_support/concern"
 
 require "attr_cleaner/module_mixin"
