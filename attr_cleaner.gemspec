@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Thomas Drake-Brockman"]
   s.email       = ["thom@sfedb.com"]
-  s.homepage    = "https://rubygems.org/gems/attr_cleaner"
+  s.homepage    = "https://github.com/thomasfedb/attr_cleaner"
   s.summary     = "Cleans up model attributes."
   s.description = "Strips spaces from attributes, and sets empty strings to nil."
 
