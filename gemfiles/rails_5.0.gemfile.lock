@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ../
   specs:
     attr_cleaner (1.0.0)
       activesupport (>= 4.2)
@@ -55,6 +55,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord (~> 5.0)
   appraisal
   attr_cleaner!
   byebug

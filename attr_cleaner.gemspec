@@ -7,15 +7,15 @@ Gem::Specification.new do |s|
   s.version     = AttrCleaner::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Thomas Drake-Brockman"]
-  s.email       = ["thomas@pixent.com.au"]
+  s.email       = ["thom@sfedb.com"]
   s.homepage    = "https://rubygems.org/gems/attr_cleaner"
   s.summary     = "Cleans up model attributes."
-  s.description = "Strips spaces from attributes, and sets empty strings to nil. Can be used with Rails 3, in any ActiveRecord project, or with other ORMs that define write_attribute."
+  s.description = "Strips spaces from attributes, and sets empty strings to nil."
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files    = `git ls-files -- spec/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  
-  s.add_dependency('activesupport', '~> 3.0.0')
+
+  s.add_dependency('activesupport', '>= 4.2')
 end

@@ -1,4 +1,11 @@
 source "http://rubygems.org"
 
-# Specify your gem's dependencies in attr_cleaner.gemspec
 gemspec
+
+gem "rspec"
+gem "jamjar"
+
+group :tools do
+  gem "appraisal"
+  gem "byebug"
+end
