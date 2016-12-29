@@ -3,6 +3,10 @@
 Cleans up your model attributes. Strips leading and trailing space, and turns
 empty strings into `nil`.
 
+Tested against Rails 4.2 and 5.0.
+
+![Travis CI](https://travis-ci.org/thomasfedb/attr_cleaner.svg?branch=master)
+
 ## Install
 
 If you're using Rails with ActiveRecord all you need to do is:
