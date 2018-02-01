@@ -10,14 +10,6 @@ describe AttrCleaner::Model do
 
   let(:instance) { model.new }
 
-  describe ".attr_cleaner" do
-    context "called with attributes" do
-      before { model.attr_cleaner :title, :body }
-
-      specify { expect(model.attr_cleaners).to eq [:title, :body] }
-    end
-  end
-
   describe "#write_attribute_with_cleaner" do
     context "with no cleaners" do
       context "a padding string is assigned" do
