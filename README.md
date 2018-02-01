@@ -3,7 +3,7 @@
 Cleans up your model attributes. Strips leading and trailing space, and turns
 empty strings into `nil`.
 
-Tested against Rails 4.2 and 5.0.
+Tested against Rails 4.2, 5.0, and 5.1.
 
 ![Travis CI](https://travis-ci.org/thomasfedb/attr_cleaner.svg?branch=master)
 
@@ -23,12 +23,11 @@ Simply pass a list of attributes that you want to clean:
 attr_cleaner :title, :body
 ```
 
-Child models will inherit the attribute list from their parent by default.
+Child models will inherit the attribute writers from their parent.
 
 ## Other ORMs
 
-AttrCleaner will also work with any ORM that writes attributes via a method
-called `write_attribute`.
+AttrCleaner works by generating attribute setters and should work with most ORMs.
 
 To get AttrCleaner working with your ORM just include it into your models:
 
@@ -38,4 +37,4 @@ include AttrCleaner::Model
 
 ## Copyright
 
-Copyright &copy; 2010 Thomas Drake-Brockman
+Copyright &copy; 2018 Thomas Drake-Brockman
