@@ -1,11 +1,11 @@
 # AttrCleaner
 
+[![Travis CI](https://travis-ci.org/thomasfedb/attr_cleaner.svg?branch=master)](https://travis-ci.org/thomasfedb/attr_cleaner)
+
 Cleans up your model attributes. Strips leading and trailing space, and turns
 empty strings into `nil`.
 
 Tested against Rails 4.2, 5.0, and 5.1.
-
-![Travis CI](https://travis-ci.org/thomasfedb/attr_cleaner.svg?branch=master)
 
 ## Install
 
